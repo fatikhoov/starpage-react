@@ -1,0 +1,95 @@
+/* элементы */
+@import ./sass/elems/ElemTitles
+@import ./sass/elems/ElemButton
+@import ./sass/elems/ElemImages
+@import ./sass/elems/ElemsForm
+/* блоки главной */
+@import ./sass/blocks/BlockMenu
+@import ./sass/blocks/BlockMain
+@import ./sass/blocks/BlockFooter
+/* компоненты */
+@import ./sass/components/PriceCards
+@import ./sass/components/CarouselCards
+@import ./sass/components/ReviewCards
+@import ./sass/components/ModalsAll
+/* внутренние страницы */
+@import ./sass/services/landingServices
+
+.circle-blue
+    position: absolute
+    top: -5%
+    left: -5%
+    width: 100px
+    height: 100px
+    opacity: 0.5
+    -webkit-filter: blur(50px)
+    filter: blur(50px)
+    background-color: #0449f9
+
+.circle-brand
+    position: absolute
+    top: -5%
+    left: -5%
+    width: 100px
+    height: 100px
+    opacity: 0.5
+    -webkit-filter: blur(50px)
+    filter: blur(50px)
+    background-color: var(--second-color-brand)
+    z-index: 1
+
+.hidden 
+    display: none
+ 
+.desctop-show
+    display: none
+
+.overflow-hidden
+    overflow: hidden
+
+.hidden-accordion 
+    visibility: hidden !important
+    opacity: 0  !important
+    height: 0px!important
+    margin-top: -10px !important
+    transform: translateY(-10px) !important
+    transition: all .1s 
+
+
+#touchArea     
+    width: 100% !important
+    margin-top: auto !important
+    margin-bottom: 0 !important
+    border-radius: 10px 10px 0 0
+    .modal__dialog-body
+        padding: 40px
+        color: seagreen 
+
+*::-webkit-scrollbar 
+    width: 8px
+
+*::-webkit-scrollbar-track 
+    -webkit-box-shadow: inset -2px 0 6px rgba(0, 0, 0, 0.3)
+    border-radius: 10px
+
+*::-webkit-scrollbar-thumb 
+    background-color: var(--color-brand)
+    outline: 1px solid var(--color-brand)
+    border-radius: 10px
+
+.slick-slide
+    padding: 8px
+.project
+    list-style-type: none
+
+.breadcrumb-not-active 
+    color: #cccccc
+
+.breadcrumb-active 
+    color: #000000
+
+
+
+@media  ( min-width: 480px )
+    .desctop-show
+        display: flex

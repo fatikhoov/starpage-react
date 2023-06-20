@@ -1,0 +1,129 @@
+*
+    line-height: normal
+    
+pre,
+blockquote 
+    border: 1px solid #999
+    page-break-inside: avoid
+
+thead 
+    display: table-header-group
+
+tr,
+img 
+    page-break-inside: avoid
+
+img 
+    max-width: 100% !important
+
+h1,h2,h3,h4,h5
+    position: relative 
+    margin: 0
+    page-break-after: avoid 
+    color: var(--color-dark)
+    z-index: 1 
+    font-family: 'Montserrat', sans-serif
+    
+h1 
+    font-size: 24px 
+    
+h2
+    font-size: 24px 
+
+h3
+    font-size: 22px 
+
+h4
+    font-size: 18px
+
+h1,h2,h3
+    text-transform: uppercase
+ 
+ 
+h5,
+h6
+    font-size: 16px
+    font-weight: 400 
+p 
+    display: flex
+    flex-direction: column
+
+p,
+h2,
+h3 
+    orphans: 3
+    widows: 3 
+a
+    color: var(--color-dark)
+    text-decoration: none 
+    background-color: transparent
+    &:active,
+    &:hover
+        outline: 0 
+    &.js-modal-open  
+        color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: .4s ease-in-out
+    &.js-modal-open:hover
+        box-shadow: 0 0 10px #cccccc22
+    &.js-modal-open:active
+        color: white
+    &.test
+        background: teal
+    &:visited 
+        text-decoration: none
+
+.STARPAGE 
+    font-weight: 600
+
+.none-list-style-type
+    ul
+        padding-left: 0 !important
+        list-style-type: none !important
+        justify-content: flex-start
+.bold
+    font-weight: 700
+
+
+#success-send-modal 
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    font-weight: 700
+    color: seagreen
+    
+.onSuccess__modal
+    font-size: 16px
+    font-weight: 500 
+
+.text-color-brand 
+    transition: .4s ease-in-out
+
+ 
+.title__head-block 
+    font-size: 24px
+    line-height: 1.5
+    font-weight: 700
+    text-transform: uppercase
+
+.main__services-h2
+    margin: 0
+    width: auto
+    align-self: left
+
+.home__loading
+    font-size: 32px
+
+.link-block-text
+    z-index: 2
+
+@media (min-width: 640px)
+    .title__head-block 
+        font-size: 40px 
+
+@media (min-width: 940px)
+    .title__head-block 
+        font-size: 50px 
+    .main__services-h2
+        align-self: center !important

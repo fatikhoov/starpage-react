@@ -1,0 +1,250 @@
+fieldset
+    padding: 0
+    margin: 0 
+    border: none
+
+    
+legend 
+    font-size: 16px
+    font-weight: 700
+    padding: 16px 0
+    border: 0
+    color: var(--color-dark) 
+    
+input  
+    width: -webkit-fill-available
+    padding: 8px 4px 4px
+    font-size: 16px
+    border: 0
+    border-radius: 4px 4px 0 0
+    border-bottom: 1px solid #ccc
+    color: black
+    background-color: transparent
+    &::placeholder
+        font-size: 16px
+        color: #222 
+        opacity: .8
+    &:focus 
+        color: #222  
+        outline: 0  
+        border-bottom: 1px solid var(--color-brand)
+
+input[type='reset'] 
+    background: white
+    border-bottom: 0 
+    font-size: 16px
+    font-weight: 700
+    color: #999
+    text-transform: uppercase 
+    cursor: pointer
+
+input[type='reset']:hover 
+    color: #222
+
+.invalid 
+    box-shadow: inset 1px 0 6px rgb(224, 151, 151)
+    border-bottom: 1px solid #e09797
+
+ 
+textarea 
+    color: #222
+    border: 0
+    border-bottom: 1px solid #ccc
+    outline: none 
+    background: transparent
+    font-size: 16px
+    border-radius: 0
+    padding: 8px 4px 4px
+    &:focus,
+    &:focus-visible 
+        outline: 0
+        font-size: 16px
+        color: #222  
+        outline: 0  
+        border-bottom: 1px solid var(--color-brand)
+    &::placeholder  
+        opacity: 0.8
+
+
+.starpage_input-radio-wrapper
+    box-shadow: 0px 0px 20px rgba(48, 48, 48, 0.1)
+    border-radius: 16px
+    border: 1px solid #DADADA
+    background: transparent
+    padding: 16px 
+.starpage_input-radio-wrapper:hover
+    background: #DADADA
+.starpage_input-radio-label
+    padding: 16px 0
+
+
+.error .starpage__input
+    border-color: #e09797
+
+.starpage__input-file
+    width: 100%
+.starpage__input-textarea
+    height: 80px !important
+
+
+
+.error-label
+    display: block
+    position: absolute
+    top: 40px 
+    left: 0
+    font-size: 10px !important
+    color: #e09797
+    margin-top: 4px
+
+.success .starpage__input
+    border-bottom: 1px solid green 
+
+
+.form__input-wrapper
+    position: relative
+    width: 100%
+    height: 40px
+    .starpage__input
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+    .starpage__input-label
+        position: absolute
+        left: 4px
+        top: 10px
+        cursor: text
+        transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in
+    .starpage__input:focus ~ .starpage__input-label,
+    .starpage__input:not(:placeholder-shown).starpage__input:not(:focus) ~ .starpage__input-label
+        top: -6px
+        left: 0
+        font-size: 10px
+        background: #fff
+
+
+
+
+
+
+
+
+
+.input__wrapper 
+    display: flex
+    flex-direction: column
+    width: 100%
+    position: relative
+    margin: 0
+    text-align: center
+.input__wrapper-files
+    gap: 0
+ 
+.input__file 
+    opacity: 0 
+    position: absolute
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    cursor: pointer
+
+.input__file-button-text 
+    line-height: 1
+    margin-top: 1px 
+
+.input__file-button 
+    width: 100% 
+    height: 60px 
+    background: transparent  
+    font-size: 14px 
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    flex-direction: column-reverse
+    align-items: flex-start
+    justify-content: center
+    gap: 8px
+    -webkit-box-align: center
+    -ms-flex-align: center 
+    -webkit-box-pack: start
+    -ms-flex-pack: start 
+    cursor: pointer
+    margin: 0 
+    padding: 0
+.input__file-button:hover
+    opacity: .6
+
+
+
+
+button:active,
+.button-primary:active,
+.btn-send:active,
+.btn-file:active,
+.btn-quiz:active
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2)
+button:hover,
+.button-primary:hover,
+.btn-send:hover,
+.btn-file:hover,
+.btn-quiz:hover
+    cursor: pointer
+    opacity: .8
+
+.buttons__file-upload
+    display:    flex
+    flex-direction: row
+    justify-content: flex-start
+    gap: 32px
+.images__file-upload-pre
+    display: flex
+    flex-wrap: wrap 
+
+.preview-image-file-upload
+    position: relative
+    height: max-content
+    &:hover .preview-image-file-remove
+        opacity: 1
+    &:hover .preview-image-file-info
+        opacity: 1
+        bottom: 0
+.preview-image-file-upload.removing
+    transform: scale(0)
+    transition: transform .3s
+
+.preview-image-file-remove 
+    opacity: 0
+    font-weight: 700
+    width: 20px
+    height: 20px
+    position: absolute
+    right: 0
+    top: 0
+    background: rgba(255, 255, 255, .5)
+    color:#222
+    cursor: pointer
+    transition: opacity .22s
+    &:hover
+        opacity: .8
+.preview-image-file-info
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: absolute
+    right: 0
+    left: 0
+    bottom: -10px 
+    height: 25px
+    padding: 0 5px 
+    opacity: 0
+    font-size: 10px
+    color:#222
+    background: rgba(255, 255, 255, .5) 
+    transition: bottom .22s
+
+.input__file-upload
+    display: none

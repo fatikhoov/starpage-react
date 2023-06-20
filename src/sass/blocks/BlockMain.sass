@@ -1,0 +1,315 @@
+.container
+    width: 100%
+.nav.main.wrapper
+    padding: 32px 5%
+.main-container,.header-container, .footer-container
+    flex-grow: 1
+    overflow: visible
+    z-index: 2 
+    .wrapper
+        width: 100%
+        margin: 0    
+    .main
+        padding: 64px 5%
+        li
+            span
+                color: black
+    .main_dark
+        background: var(--color-dark)
+        .starpage__input-label
+            color: white
+            background: var(--color-dark)
+        .form__input-wrapper .starpage__input:focus~.starpage__input-label, .form__input-wrapper .starpage__input:not(:placeholder-shown).starpage__input:not(:focus)~.starpage__input-label
+            background: var(--color-dark)
+        h2,h3,h4,p,span 
+            width: 100%
+            color: white !important
+        li
+            span
+                color: white
+        input, textarea
+            color: white 
+            &:focus
+                color: white 
+            &:active
+                color: white
+            &::placeholder
+                color: white
+        #loader-modal
+            color: black !important
+        .text-transparent-color
+            color: transparent !important
+            -webkit-text-stroke: 1px white !important
+        .btn-quiz
+            border-color: white
+            color: white
+            
+    .clearfix
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+.header-container
+    background: none
+    background-color: none
+
+.main__article
+    width: 100% 
+    flex-direction: column  
+.main__section-wrapper
+    gap: 32px 
+    flex-direction: column 
+    section
+        width: 100%
+        gap: 32px
+        flex-direction: column
+        flex-wrap: wrap 
+        align-items: flex-start  
+    .link-block 
+        ul 
+            padding-left: 18px
+            gap: 0
+            flex-direction: column 
+            list-style-type: disc
+            .link-block__ul-title
+                margin-left: -18px !important
+                line-height: 30px
+                list-style-type: none
+            li
+                color: var(--color-brand)
+                font-size: 18px 
+            li
+                span  
+                    margin-left: 0px
+                    font-size: 16px 
+
+
+.link-block 
+    width: auto
+    display: flex
+    flex-direction: column
+    gap: 8px
+    position: relative 
+    border-radius: 10px 
+    transition: .4s ease-in-out 
+    h2
+        text-transform: none
+        font-weight: 700
+        margin-top: 0
+    &-content
+        flex-grow: 1
+    .text-transparent-color
+        display: flex
+        justify-content: flex-end
+        align-content: flex-start
+        flex-direction: row
+        font-size: 100px
+        font-weight: 700 
+        line-height: 100%
+        color: transparent 
+        -webkit-text-stroke: 1px black
+        -webkit-background-clip: text
+    section
+        gap: 0
+        
+     
+ 
+ 
+
+
+.main__header
+    width: 100%
+    min-height: 400px 
+    position: relative
+    flex-direction: column
+    gap: 32px
+    picture   
+        align-self: flex-end
+.main__services  
+    .link-block 
+        width: auto
+        margin: 0
+        padding: 16px
+        cursor: pointer
+        -webkit-box-shadow: 0 4px 8px #ccc
+        -moz-box-shadow: 0 4px 8px #ccc
+        box-shadow: 0 4px 8px #ccc
+        &:first-child  
+            .text-color-brand
+                color: #6f26ec 
+        &:hover  
+            -webkit-box-shadow: none
+            -moz-box-shadow: none
+            box-shadow: none 
+            .text-color-brand-hover
+                color: #6f26ec !important
+    section:hover
+        .link-block 
+            &:first-child  
+                .text-color-brand
+                    color: black 
+             
+    picture
+        position: absolute
+        top: -15%
+        left: 0% 
+.main__advantages  
+    section
+        .link-block  
+            gap: 0
+            cursor: auto
+            picture
+                position: absolute
+                top: -10%
+                right: 30%
+            .link-block-content
+                display: flex
+                flex-direction: row
+.main__portfolio 
+    .portfolio-block
+        padding: 16px
+        display: flex
+        flex-direction: column
+        width: auto
+        box-shadow: 0px 5px 20px 0px rgba(178,57,221,0.2)
+        border-radius: 20px
+        background-color: #ffffff
+        background-position: center center
+        border-color: transparent
+        border-style: solid
+.main__work-steps
+    .work-steps__ul
+        padding-left: 16px
+        color: white
+        display: block
+        list-style-type: circle
+    .work-steps__image
+        position: absolute
+        top: -20%
+        right: 10%
+.main__req-res
+    position: relative  
+    section
+        gap: 0
+    &-accordion-items
+        justify-content: center
+    .req-res__image
+        position: absolute
+        top: -64px
+        right: 0 
+        transform: rotate(20deg)
+    .accordion__req-res
+        width: 100% 
+        min-height: 50px
+        position: relative
+        display: flex
+        flex-direction: column 
+    .btn-accordion  
+        border-radius: 10px 
+        margin-left: -8px 
+    .btn-accordion,
+    span
+        transition: all  .4s ease   
+    .title-req-res
+        text-align: left
+        width: 100%  
+        padding: 8px 0
+        font-size: 16px
+        font-weight: 400
+    .content-accordion
+        visibility: visible
+        opacity: 1  
+        height: auto
+        transform: translateYs(0)
+        transition: all  .3s ease-in
+
+
+@media (min-width: 780px) 
+    .main__article
+        gap: 32px
+    .main__service-landing 
+        flex-direction: row-reverse !important
+        .title-img-page
+            margin-top: -100px
+            width: 62% !important
+    .main__wrapper-header 
+        picture
+            position: absolute
+            top: 0
+            right: 0
+            margin-top: 100px 
+     
+    .main__services
+        margin-top: 0 
+    .main__section-wrapper 
+        section
+            flex-direction: row
+            flex-wrap: wrap
+            .portfolio-block,.link-block
+                flex: 1
+    .main__service-price
+        .link-block
+            flex-direction: row
+            section
+                flex-direction: column
+            
+
+    
+@media  ( min-width: 940px )
+    .main
+        padding: 80px 5% !important
+    .main__section-wrapper
+        gap: 42px !important
+    .header-container
+        .header__menu
+            .title
+                font-size: 26px
+
+    .main__header
+        h1
+            font-size: 4vw
+            position: relative
+            z-index: 2
+        width: 100%
+        min-height: 400px 
+        position: relative
+        flex-direction: column
+        gap: 32px
+        picture   
+            margin-top: -114px
+            margin-right: 195px
+            align-self: flex-end
+
+    .main__services  
+        margin-top: -98px
+        .link-block 
+            height: calc( 100% - 32px )
+            margin: 0
+            padding: 16px
+            cursor: pointer
+            -webkit-box-shadow: 0 4px 8px #ccc
+            -moz-box-shadow: 0 4px 8px #ccc
+            box-shadow: 0 4px 8px #ccc 
+        picture
+            position: absolute
+            top: -12%
+            left: 22%
+            .logo-stars__services
+                width: 64px
+        h6
+            text-transform: none
+            font-weight: 400
+            margin-top: 0 
+        h2
+            font-size: 26px
+            font-weight: 700
+    .main__advantages
+        picture
+            top: -30% !important
+    .main__req-res 
+        .accordion__req-res
+            width: 62% 
+    
+    .work-steps__image
+        top: -32% !important
+
+

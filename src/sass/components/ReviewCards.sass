@@ -1,0 +1,47 @@
+.review-card-wrapper
+    display: flex
+    gap: 16px
+    width: max-content
+    overflow: scroll
+
+.carousel-cards
+    .carousel-cell
+        height: 420px
+
+.review-card
+    width: 300px
+    height: 100% 
+    display: flex
+    flex-direction: column
+    border-radius: 10px 
+    border: 1px solid var(--color-light)
+
+    .review-header 
+        display: flex
+        flex-direction: row
+        align-items: center
+        &-image
+            position: relative 
+            display: flex
+            align-items: center
+            overflow: hidden
+            width: 64px
+            height: 64px 
+            border-radius: 100px 
+        .review-name
+            display: flex
+            flex-direction: column
+            padding-left: 8px
+            span
+                font-size: 14px
+    .review-text,.review-name:last-child
+        font-weight: 300 
+    .review-header
+        margin:  16px  16px 0  16px
+    .review-details
+        flex-grow: 1
+        margin:  0 16px 
+    .review-date    
+        font-size: 12px
+        display: flex
+        justify-content: flex-end

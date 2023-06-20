@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  --color-white: #fff;
+  --color-light: #ebebeb;
+  --color-black: #000;
+  --color-dark: #303030;
+  --color-blue: #0345fa;
+  --color-brand: #6f26ec;
+  --second-color-brand: #d900dd;
+
+  --modal-width: 320px;
+  --modal-height: 80vh;
+  --modal-transition: 0.4s;
+
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+a {
+  line-height: 100%;
+}
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+  background: var(--color-white);
+}
+
+.title {
+  align-self: center;
+  background-color: var(--color-dark);
+  background-image: linear-gradient(
+    254deg,
+    rgba(217, 0, 221, 1) 0%,
+    rgba(3, 69, 250, 1) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+nav {
+  display: flex;
+}
+
+ul {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-end;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.ul-footer {
+  margin: 0;
+}
+
+nav a {
+  display: flex;
+  padding: 0;
+
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+
+  color: var(--color-brand);
+}
+
+nav a:hover,
+nav a:visited {
+  color: var(--color-brand);
+  opacity: 0.8;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+  nav {
+    margin-right: 0;
+    display: flex;
+  }
+
+  nav a {
+    width: auto;
+    padding: 0;
+  }
+
+  /* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+  nav ul li {
+    display: inline;
+  }
+
+  .oldie nav a {
+    margin: 0 0.7%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+  /* .header-container,
+  .main aside {
+    -webkit-box-shadow: 0 5px 10px #aaa;
+    -moz-box-shadow: 0 5px 10px #aaa;
+    box-shadow: 0 5px 10px #aaa;
+  } */
+
+  /* ============
+    WIDE: Menu
+   ============ */
+
+  nav {
+    width: auto;
+  }
+
+  /* ============
+    WIDE: Main
+   ============ */
+
+  .main article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1140px) {
+  /* ===============
+    Maximal Width
+   =============== */
+
+  .wrapper {
+    width: 1026px; /* 1140px - 10% for margins */
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1220px) {
+  /* ===============
+    Maximal Width
+   =============== */
+
+  nav {
+    margin-right: 0;
+  }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}

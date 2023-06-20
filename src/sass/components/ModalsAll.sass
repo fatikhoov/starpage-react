@@ -1,0 +1,157 @@
+.modal__quiz-header
+    flex-direction: column 
+    gap: 8px  
+
+    &-title
+        display: flex 
+        align-items: baseline
+        width: 100%
+    &-title-text
+        font-size: 14px
+    &-close
+        align-self: auto
+
+
+    &-description
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+    &-description-content
+        font-size: 10px
+
+.modal__quiz-dialog-footer
+    padding: 0  16px 16px
+    &-btn
+        justify-content: space-between
+
+.modal__quiz-steps-show
+    font-size: 10px
+    width: auto
+
+.modal__quiz-indicator-line
+    width: 100%
+    height: 4px
+    overflow: hidden
+    position: relative
+    background: #DADADA
+    &-show 
+        position: absolute
+        left: 0
+        top: 0
+        width: 20%
+        height: inherit
+        background: linear-gradient(254deg,#d900dd 0,#0345fa 100%)
+        z-index: 20
+        transition: .6s ease-in-out
+
+
+
+
+.btn__footer-wrapper
+    display: flex
+    width: 100%
+
+
+.tab__circle-color
+    &-1,
+    &-2,
+    &-3,
+    &-4,
+    &-5
+        position: absolute  
+        filter: blur(30px)
+        border-radius: 100%
+    
+
+
+.tab__circle-color-1 
+    width: 80px
+    height: 80px
+    right: -8%
+    top: 42% 
+    background: linear-gradient(134.27deg, #9273ED 5.56%, #162CF2 49.74%, #B239DD 93.01%)
+
+.tab__circle-color-2
+    width: 50px
+    height: 50px
+    right: 30%
+    top: 50%
+    background: linear-gradient(134.27deg, #DDFF57 5.56%, #FFF50F 49.74%, #6EDD39 93.01%)
+
+.tab__circle-color-3
+    width: 120px
+    height: 120px
+    right: 90% 
+    top: 66% 
+    background: linear-gradient(134.27deg, #9273ED 5.56%, #B916F2 49.74%, #B239DD 93.01%)
+    
+.tab__circle-color-4
+    width: 50px
+    height: 50px
+    right: 20%
+    top: 40%
+    background: linear-gradient(134.27deg, #9273ED 5.56%, #04FFC3 49.74%, #B239DD 93.01%)
+    
+.tab__circle-color-5
+    width: 80px
+    height: 80px
+    right: 30% 
+    top: 80% 
+    background: linear-gradient(134.27deg, #9273ED 5.56%, #FF79A9 49.74%, #B239DD 93.01%)
+
+.onSuccess__modal
+    display: flex
+    flex-direction: column
+    align-items: center 
+    &-title,
+    &-descr,
+    &-content
+        padding: 0
+        margin: 0
+        text-align: center
+    &-title
+        font-size: 28px
+        font-weight: 700
+    &-descr
+        font-size: 16px
+        font-weight: 700
+        margin: 24px 0 8px
+    &-content
+        font-size: 14px
+        font-weight: 400
+    
+    
+.tab__circle-color-success
+    position: absolute  
+    width: 100px
+    height: 100px
+    left: 10%
+    top: 10%  
+    border-radius: 100%
+    filter: blur(50px)
+    background: linear-gradient(134.27deg, #9273ED 5.56%, #162CF2 49.74%, #B239DD 93.01%)
+
+#onSuccess__modal-quiz-btn
+    align-self: center
+    background: #303030
+    color: white
+    margin: auto
+    padding: 0 32px
+    width: auto
+    font-weight: 300
+
+
+
+.modal__dialog-loader
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background: #222
+    z-index: 30
+ 

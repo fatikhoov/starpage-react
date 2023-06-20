@@ -1,0 +1,144 @@
+.header-container
+    padding: 0 5%
+    .header__menu
+        width: 100% 
+        align-items: center
+    
+    
+.link-menu
+    position: relative
+    width: auto
+    height:100% 
+    font-weight: 600 
+    text-transform: uppercase
+    text-decoration: none
+    &:hover, &:visited  
+        opacity: 0.8
+        text-decoration: underline
+a.link-menu
+    display: flex
+    flex-direction: column
+    gap: 4px
+    color: var(--second-color-brand) 
+    transition: all .4s ease-out
+
+.nav-link-burger
+    justify-content: flex-start !important
+    &:terget
+        color: var(--color-brand) !important
+
+    
+.menu-mobile
+    display: none
+    flex-direction: column
+    position: fixed 
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    overflow-y: scroll
+    padding: 100px 16px
+    color: var(--color-dark)
+    background-color: var(--color-white)
+    -webkit-box-shadow: 0 4px 8px #ccc
+    -moz-box-shadow: 0 4px 8px #ccc
+    box-shadow: 0 4px 8px #ccc
+    z-index: 9 
+
+
+.menu-burger-design
+    width: 32px
+    height: 2px
+    background: var(--second-color-brand)
+    transition: all .4s ease-out
+    &-close
+        position: absolute
+        top: 14px
+        left: 0
+        width: 32px
+        height: 2px
+        background: var(--second-color-brand)
+        transition: all .4s ease-out
+    &-close:first-child 
+        rotate: (45deg)     
+    &-close:last-child 
+        rotate: (-45deg)
+
+
+.not-active
+    visibility: hidden !important
+    opacity: 0 !important
+
+
+    
+.menu__starpage,
+.menu__starpage-items
+    display: flex
+    flex-direction: column
+    a
+        color: var(--color-dark) !important
+
+.menu__starpage
+    height: auto
+    gap: 16px
+    &-items
+        gap: 16px !important
+        justify-content: flex-start
+        a
+            font-size: 16px
+            font-weight: 600
+        a:active,
+        a:hover,
+        a:target
+            color: var(--color-brand) !important
+            text-decoration: none
+            .icon-color
+                color: var(--color-brand) 
+                -webkit-text-stroke: 1px var(--color-brand) !important
+        &-social
+            flex-direction: row
+            justify-content: flex-start 
+            align-items: flex-end
+
+.icon-color
+    font-size: 10px
+    font-weight: 400
+    margin-left: 4px
+    color: transparent 
+    -webkit-text-stroke: 1px var(--color-dark)
+    -webkit-background-clip: text
+    rotate: (0deg)
+    transition: all .4s ease-in-out
+
+#menu__starpage-items-services
+    margin-bottom: 8px
+    gap: 8px !important
+    a
+        font-size: 14px 
+        font-weight: 400  
+
+#modal-menu
+    .modal__dialog
+        margin: 32px !important
+        height: auto !important
+        border-radius: 16px
+    .modal__dialog-body
+        gap: 32px
+        justify-content: space-between 
+
+@media (min-width: 480px)
+    .link-menu 
+        height: 90px
+        padding: 0 32px
+    .menu-mobile
+        display: none
+        position: fixed
+        width: 60%
+        left: auto
+        
+@media (min-width: 780px)
+    .menu-mobile
+        display: none
+        position: fixed
+        width: 40%
+        left: auto  
