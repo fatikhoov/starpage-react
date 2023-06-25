@@ -1,32 +1,31 @@
 const projects = [
   {
     title: 'Психолог',
-    skills: 'React, Node.js, MongoDB',
+    skills: 'Короткое описание кейса',
     img: '/img/cases/psychologist.png',
     gitHubLink: 'https://github.com',
-    pathtitle: 'psychologist',
+    pathtitle: 'Psychologist',
   },
   {
     title: 'Таргетолог',
     img: '/img/cases/targetolog.png',
-    skills: 'React, PHP, MySql',
+    skills: 'Короткое описание кейса',
     gitHubLink: 'https://github.com',
-    pathtitle: 'targetolog',
+    pathtitle: 'Targetolog',
   },
   {
     title: 'Студия йоги',
     img: '/img/cases/yoga.png',
-    skills: 'Vue JS, Node.js, MongoDB',
+    skills: 'Короткое описание кейса',
     gitHubLink: 'https://github.com',
-    pathtitle: 'yoga',
+    pathtitle: 'Yoga',
   },
   {
-    title: 'Пекарня',
+    title: 'Пекарня «Крендель и Булочка»',
     img: '/img/cases/krendel.png',
-    skills:
-      'Заказчик - пекарня «Крендель и Булочка». С момента их открытия прошло несколько месяцев. Задачей проекта было создание современного и функционального веб-сайта, способного эффективно представлять бизнес и идею заказчика в онлайн-пространстве. Мы начали исследование рынка и целевой аудитории. На основе проведенного анализа предложили заказчику провести фотосессию. Нашли фуд-фотографа и в назначенную дату приехали проконтролировать процесс. Наша команда учла требования и потребности компании, так мы наиболее точно отразили ценности бренда, разработали уникальные дизайн-макеты, которые передали стиль и атмосферу пекарни. Сайт имеет адаптивный дизайн, что позволяет корректно отображаться на различных устройствах, включая компьютеры, планшеты и мобильные телефоны. Дизайн обеспечивает пользователям интуитивно понятное взаимодействием с сайтом.',
+    skills: 'Короткое описание кейса',
     gitHubLink: 'https://krendel-bulochka.ru/',
-    pathtitle: 'krendelbulochka',
+    pathtitle: 'Krendelbulochka',
   },
 ]
 

@@ -82,12 +82,41 @@
 .project
     list-style-type: none
 
+.bread-nav
+    margin: 0 5%
+.breadcrumb-wrapper
+    font-size: 10px
+    display: flex
+    gap: 4px
+    margin-right: 4px
+.bread-arrow
+    margin-top: -1px
+
+.breadcrumb-not-active,
+.breadcrumb-active 
+    font-weight: 600
+
 .breadcrumb-not-active 
-    color: #cccccc
+    color: #888888 !important
 
 .breadcrumb-active 
-    color: #000000
+    color: #333333 !important  
 
+.slick-slide
+    .project
+        display: flex
+        flex-direction: column
+        gap: 14px
+        padding: 14px
+        background-color: rgb(240, 240, 240) 
+        a
+            color: #222
+        button
+            border-radius: 10px
+            border: 2px solid #ccc
+        p
+            margin: 0
+            padding: 0
 
 
 @media  ( min-width: 480px )

@@ -8,13 +8,11 @@ const Breadcrumbs = () => {
   useBreadcrumbs().forEach((e) => {
     if (e.key === location.pathname) {
       projects.forEach((i) => {
-        console.log(i.pathtitle, e.breadcrumb.props.children)
         if (
           i.pathtitle.toLowerCase() ===
           e.breadcrumb.props.children.toLowerCase()
         ) {
           y = i.title
-          console.log(y)
         }
       })
     }
@@ -33,11 +31,23 @@ const Breadcrumbs = () => {
     return
   } else {
     return (
-      <nav>
+      <nav className="bread-nav">
         {breadcrumbs.map(({ match, breadcrumb }) => (
-          <NavLink key={match.pathname} to={match.pathname}>
-            {breadcrumb}/
-          </NavLink>
+          <div className="breadcrumb-wrapper" key={match.pathname}>
+            <NavLink
+              to={match.pathname}
+              className={
+                location.pathname === match.pathname
+                  ? 'breadcrumb-active'
+                  : 'breadcrumb-not-active'
+              }
+            >
+              <span>{breadcrumb} </span>
+            </NavLink>
+            <span className="bread-arrow">
+              {location.pathname === match.pathname ? '' : '  →  '}
+            </span>
+          </div>
         ))}
       </nav>
     )

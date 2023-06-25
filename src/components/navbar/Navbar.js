@@ -102,7 +102,7 @@ const Navbar = () => {
                     <a href="https://t.me/my_starpage">
                       <img
                         className="logo-telegram"
-                        src="img/telegram.svg"
+                        src="/img/telegram.svg"
                         alt="starpage telegram"
                       />
                     </a>
@@ -111,7 +111,7 @@ const Navbar = () => {
                     <a href="mailto:hello@starpage.ru">
                       <img
                         className="logo-email"
-                        src="img/email.png"
+                        src="/img/email.png"
                         alt="starpage email"
                       />
                     </a>

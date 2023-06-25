@@ -19,7 +19,7 @@
 
 
 .modal__content
-  padding: 32px 5%
+  padding: 0
   background-color: #fff
   min-width: 320px
   min-height: 300px
@@ -44,6 +44,7 @@
   height: 100%
   display: flex
   flex-direction: column
+  gap: 32px
 
   
 
@@ -53,3 +54,17 @@
 .menu__mobile
   p
     margin: 0
+
+
+.modal-form
+  border-radius: 16px
+  .modal__dialog-body
+    display: flex
+    flex-direction: column
+    min-height: 50vh
+    max-height: 60vh
+    overflow: inherit
+    overflow-y: auto
+    justify-content: space-between
+    background: transparent
+    transition: var(--modal-transition)

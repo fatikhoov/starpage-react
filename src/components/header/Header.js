@@ -1,6 +1,13 @@
+import React, { useState } from 'react'
+
+import ModalForm from '../Modal/ModalForm'
+import Modal from '../Modal/Modal'
+
 import './style.css'
 
 const Header = () => {
+  const [modalActive, setModalActive] = useState(false)
+
   return (
     <div>
       <div className="main wrapper clearfix" id="section__home-1">
@@ -9,9 +16,14 @@ const Header = () => {
             <h1 className="title__head-block">
               Креативные сайты <br />- наша особенность
             </h1>
-            <a className="js-modal-open button-primary" href="#modal-test">
+            <div
+              className="js-modal-open button-primary"
+              onClick={() => {
+                setModalActive(true)
+              }}
+            >
               Рассчитать стоимость
-            </a>
+            </div>
             <picture>
               <img
                 className="logo-rocket"
@@ -216,6 +228,13 @@ const Header = () => {
           </section>
         </article>
       </div>
+      <Modal
+        active={modalActive}
+        setActive={setModalActive}
+        name={'modal-form'}
+      >
+        <ModalForm />
+      </Modal>
     </div>
   )
 }
