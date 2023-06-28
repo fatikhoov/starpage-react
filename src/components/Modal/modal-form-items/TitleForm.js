@@ -1,4 +1,7 @@
+import { memo } from 'react'
+
 const Titleform = () => {
+  console.log('memo - Рендер Titleform')
   return (
     <div className="modal__quiz-header-title">
       <div className="modal__dialog-header-content">
@@ -18,4 +21,6 @@ const Titleform = () => {
   )
 }
 
-export default Titleform
+const TitleformMemo = memo(Titleform)
+
+export default TitleformMemo

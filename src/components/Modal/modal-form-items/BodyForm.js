@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import LoaderForm from './LoaderForm'
 
-const Bodyform = ({ myformdata }) => {
+const Bodyform = ({ myformdata, myonchange }) => {
   const whatsite = 'Какой сайт вам нужен?'
   const whatdesign = 'Есть ли у Вас фирменный стиль?'
+
+  const tabFieldsets = document.querySelectorAll('fieldset.tab')
+  const totalSteps = tabFieldsets.length
 
   const [state, setState] = useState({
     'Заявка на разработку сайта': 'Квиз - модалка',
@@ -19,6 +22,19 @@ const Bodyform = ({ myformdata }) => {
   })
 
   const [isLoading, setIsLoading] = useState(false)
+  const [currentStep, setCurrentStep] = useState(1)
+
+  const handleNextStep = () => {
+    if (currentStep < totalSteps && validation(state)) {
+      setCurrentStep((prevStep) => prevStep + 1)
+    }
+  }
+
+  const handlePrevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep((prevStep) => prevStep - 1)
+    }
+  }
 
   const handleInputChange = (event) => {
     const { target } = event
@@ -27,7 +43,15 @@ const Bodyform = ({ myformdata }) => {
     const value = target.type === 'checkbox' ? target.checked : target.value
 
     setState({ ...state, [name]: value })
+
+    myonchange({ ...state, [name]: value })
   }
+
+  useEffect(() => {
+    if (state !== undefined) {
+      myonchange(state)
+    }
+  }, [state, myonchange])
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -38,7 +62,8 @@ const Bodyform = ({ myformdata }) => {
   }
 
   const validation = (event) => {
-    return console.log('Валидация прошла успешно')
+    console.log('Валидация прошла успешно')
+    return true
   }
 
   return (
@@ -59,7 +84,7 @@ const Bodyform = ({ myformdata }) => {
             onChange={handleInputChange}
           />
 
-          <fieldset className="tab">
+          <fieldset className={currentStep === 1 ? 'tab' : 'tab hidden'}>
             <legend>1. {whatsite}</legend>
             <ul className="form-ul form-ul-radio">
               <li className="starpage_input-radio-wrapper">
@@ -142,7 +167,7 @@ const Bodyform = ({ myformdata }) => {
               </li>
             </ul>
           </fieldset>
-          <fieldset className="tab">
+          <fieldset className={currentStep === 2 ? 'tab' : 'tab hidden'}>
             <legend>2. {whatdesign}</legend>
             <ul className="form-ul form-ul-radio">
               <li>
@@ -187,7 +212,7 @@ const Bodyform = ({ myformdata }) => {
               </li>
             </ul>
           </fieldset>
-          <fieldset className="tab">
+          <fieldset className={currentStep === 3 ? 'tab' : 'tab hidden'}>
             <legend>3. Персональные данные</legend>
             <ul className="form-ul">
               <li className="form__input-wrapper">
@@ -237,7 +262,7 @@ const Bodyform = ({ myformdata }) => {
               </li>
             </ul>
           </fieldset>
-          <fieldset className="tab">
+          <fieldset className={currentStep === 4 ? 'tab' : 'tab hidden'}>
             <legend>4. Контакты</legend>
             <ul className="form-ul">
               <li className="form__input-wrapper">
@@ -279,11 +304,11 @@ const Bodyform = ({ myformdata }) => {
               <li className="form__input-wrapper starpage__input-textarea">
                 <textarea
                   className="starpage__input starpage__input-textarea"
-                  name="Комментарий"
+                  name="Комментарии"
                   rows="4"
                   id="formmessage"
                   placeholder=" "
-                  value={state['Комментарий']}
+                  value={state['Комментарии']}
                   onChange={handleInputChange}
                 ></textarea>
                 <label htmlFor="formmessage" className="starpage__input-label">
@@ -323,25 +348,29 @@ const Bodyform = ({ myformdata }) => {
           className="btn__footer-wrapper modal__quiz-dialog-footer-btn"
         >
           <button
-            className="disabled btn-quiz"
+            className={` btn-quiz ${currentStep === 1 ? 'disabled' : ''}`}
             type="button"
             id="prevBtn"
-            disabled="disabled"
             data-ind="regForm-button"
+            onClick={handlePrevStep}
           >
             Назад
           </button>
           <button
-            className="btn-quiz btn-send"
-            form="regForm"
-            type="submit"
+            className={`btn-quiz btn-send ${
+              currentStep === totalSteps ? 'hidden' : ''
+            }`}
+            type="button"
             id="nextBtn"
             data-ind="regForm-button"
+            onClick={handleNextStep}
           >
             Далее
           </button>
           <button
-            className="btn-quiz btn-send hidden"
+            className={`btn-quiz btn-send ${
+              currentStep === totalSteps ? '' : 'hidden'
+            }`}
             type="submit"
             form="regForm"
             id="btnRegForm"
